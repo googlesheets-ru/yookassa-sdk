@@ -1,10 +1,7 @@
 import { refundCancelReasonMap } from '../../dictionaries';
 import { IAmount } from '../general.types';
 import { Payments } from '../payments/payment.type';
-import {
-    CreateReceiptType,
-    ReceiptRegistrationStatus,
-} from '../receipt/receipt.type';
+import { Receipts } from '../receipt/';
 import {
     ElectronicCertificateRefundMethod,
     RefundMethod,
@@ -75,7 +72,7 @@ export namespace Refunds {
          * - `canceled` — чек зарегистрировать не удалось; если используете Чеки от ЮKassa, обратитесь в техническую поддержку, в остальных случаях сформируйте чек вручную.
          * Присутствует, если вы используете [решения ЮKassa для отправки чеков](https://yookassa.ru/developers/payment-acceptance/receipts/basics) в налоговую.
          */
-        receipt_registration?: ReceiptRegistrationStatus;
+        receipt_registration?: Receipts.ReceiptRegistrationStatus;
         /**
          * Время создания возврата. Указывается по UTC и передается в формате ISO 8601, например `2017-11-03T11:52:31.827Z`
          */
@@ -117,7 +114,7 @@ export namespace Refunds {
          * [4]: https://yookassa.ru/developers/payment-acceptance/receipts/54fz/other-services/basics#payment-after-receipt
          * [5]: https://yookassa.ru/developers/payment-acceptance/receipts/self-employed/basics
          */
-        receipt?: CreateReceiptType;
+        receipt?: Receipts.CreateReceiptType;
         /** Детали возврата. Зависят от способа оплаты, который использовался при проведении платежа. */
         refund_method_data?: ElectronicCertificateRefundMethod;
     };

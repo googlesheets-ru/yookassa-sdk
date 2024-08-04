@@ -5,6 +5,7 @@
     "author": "Dmitriy <@Mityayka1>",
     "private": true,
     "license": "UNLICENSED",
+    "main": "dist/index.js",
     "scripts": {},
     "dependencies": {
         "axios": "^1.7.2",
