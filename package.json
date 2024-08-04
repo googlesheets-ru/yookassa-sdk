@@ -1,9 +1,9 @@
 {
     "name": "yookassa-sdk",
     "version": "0.0.1",
-    "description": "yookassa SDK",
+    "description": "интерфейс для интеграции с YooKassa, позволяя выполнять различные операции, такие как создание платежей, возвратов и управление ими. Написан на TypeScript.",
     "author": "Dmitriy <@Mityayka1>",
-    "private": true,
+    "private": false,
     "license": "UNLICENSED",
     "main": "dist/index.js",
     "scripts": {},
