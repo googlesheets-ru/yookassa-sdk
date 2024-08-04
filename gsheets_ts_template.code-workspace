@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"typescript.format.semicolons": "insert",
+		"editor.formatOnSave": true
+}
+}
