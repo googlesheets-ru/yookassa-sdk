@@ -242,9 +242,10 @@ export class Connector {
         return instance;
     }
 
-    async request<Res = Record<string, any>, Data = Record<string, any>>(
-        opts: RequestOpts<Data>,
-    ) {
+    protected async request<
+        Res = Record<string, any>,
+        Data = Record<string, any>,
+    >(opts: RequestOpts<Data>) {
         opts.requestId ??= randomUUID();
         const requestId = opts.requestId;
         const instance = await this.getInstance(opts);
@@ -263,23 +264,3 @@ export class Connector {
         return result;
     }
 }
-
-const initOpts: ConnectorOpts = {
-    debug: true,
-    secret_key: 'test_mCqzu8TlMR46mwYJQuQft9xNi_NEdnaIHSgaRAmuNhI',
-    shop_id: '909048',
-};
-async function test() {
-    const connector = new Connector(initOpts);
-    const response = await connector.request<
-        GetListResponse<Payments.IPayment>
-    >({
-        method: 'GET',
-        endpoint: '/payments',
-    });
-    if (response.success == 'OK') {
-        response.data;
-    }
-    console.log('response in test:', JSON.stringify(response, null, 2));
-}
-// test();
