@@ -313,9 +313,7 @@ listReceipts();
   - Создание нового возврата для указанного платежа. [Документация](https://yookassa.ru/developers/api#create_refund)
 - `load(refundId: string): Promise<Refund>`
   - Получение информации о возврате по его идентификатору. [Документация](https://yookassa.ru/developers/api#get_refund)
-- `list
-
-(params: GetRefundListFilter): Promise<Refunds.IRefund[]>`
+- `list(params: GetRefundListFilter): Promise<Refunds.IRefund[]>`
   - Получение списка возвратов с возможностью фильтрации по различным параметрам. [Документация](https://yookassa.ru/developers/api#get_refunds_list)
 
 ### Receipts
