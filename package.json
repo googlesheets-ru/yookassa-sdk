@@ -6,6 +6,15 @@
     "private": false,
     "license": "MIT",
     "main": "dist/index.js",
+    "typings": "dist/index.d.ts",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/googlesheets-ru/yookassa-sdk"
+    },
+    "bugs": {
+        "url": "https://github.com/googlesheets-ru/yookassa-sdk/issues"
+    },
+    "homepage": "https://github.com/googlesheets-ru/yookagit ssa-sdk#readme",
     "scripts": {},
     "dependencies": {
         "axios": "^1.7.2",
