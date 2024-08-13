@@ -121,6 +121,6 @@ export declare class Connector {
     maxRPS: number;
     constructor(init: ConnectorOpts);
     protected getInstance<Res, Data = Record<string, any>>(opts: RequestOpts<Data>): Promise<RateLimitedAxiosInstance>;
-    request<Res = Record<string, any>, Data = Record<string, any>>(opts: RequestOpts<Data>): Promise<ApiResponse<Res>>;
+    protected request<Res = Record<string, any>, Data = Record<string, any>>(opts: RequestOpts<Data>): Promise<ApiResponse<Res>>;
 }
 export {};

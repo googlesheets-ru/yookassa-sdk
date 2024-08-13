@@ -354,6 +354,12 @@ class YooKassaSdk extends connector_1.Connector {
 }
 exports.YooKassaSdk = YooKassaSdk;
 let client;
+/**
+ * Creates a singleton instance of YooKassaSdk with the given initialization options.
+ *
+ * @param {ConnectorOpts} init - Initialization options for the YooKassaSdk instance.
+ * @return {YooKassaSdk} The singleton instance of YooKassaSdk.
+ */
 function YooKassa(init) {
     if (!client) {
         client = new YooKassaSdk(init);

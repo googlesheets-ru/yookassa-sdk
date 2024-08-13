@@ -184,4 +184,10 @@ export declare class YooKassaSdk extends Connector {
         list: (filter?: Omit<GetReceiptListFilter, 'cursor'>) => Promise<Receipts.ReceiptType[]>;
     };
 }
+/**
+ * Creates a singleton instance of YooKassaSdk with the given initialization options.
+ *
+ * @param {ConnectorOpts} init - Initialization options for the YooKassaSdk instance.
+ * @return {YooKassaSdk} The singleton instance of YooKassaSdk.
+ */
 export declare function YooKassa(init: ConnectorOpts): YooKassaSdk;

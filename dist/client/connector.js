@@ -208,23 +208,4 @@ class Connector {
     }
 }
 exports.Connector = Connector;
-const initOpts = {
-    debug: true,
-    secret_key: 'test_mCqzu8TlMR46mwYJQuQft9xNi_NEdnaIHSgaRAmuNhI',
-    shop_id: '909048',
-};
-function test() {
-    return __awaiter(this, void 0, void 0, function* () {
-        const connector = new Connector(initOpts);
-        const response = yield connector.request({
-            method: 'GET',
-            endpoint: '/payments',
-        });
-        if (response.success == 'OK') {
-            response.data;
-        }
-        console.log('response in test:', JSON.stringify(response, null, 2));
-    });
-}
-// test();
 //# sourceMappingURL=connector.js.map
